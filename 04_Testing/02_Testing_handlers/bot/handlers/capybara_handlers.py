@@ -13,6 +13,7 @@ def choose_random_image():
 
 @router.message(Command("capybara"))
 async def cmd_capybara(message: Message):
+
     await message.answer_photo(
         photo=FSInputFile(f"/opt/images/capybara_{choose_random_image()}.jpg"),
         caption="Случайная капибара"
